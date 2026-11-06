@@ -1,0 +1,56 @@
+@model IEnumerable<MyWebsite.Models.Project>
+
+@{
+    ViewData["Title"] = "My Projects on which I worked in my carrer";
+}
+
+<h1>My Projects</h1>
+
+<p>
+    <a asp-action="Create"
+       class="btn btn-success mb-4">
+        + Add New Project
+    </a>
+</p>
+
+
+
+<div class="row">
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6 mb-4">
+
+        <div class="card shadow h-100">
+
+            <div class="card-body">
+
+                <h3 class="card-title text-primary">
+                    @item.Title
+                </h3>
+
+                <p class="card-text">
+                    @item.Description
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                        <span class="badge bg-primary">
+                            @item.Technologies
+                        </span>
+                   
+                </p>
+
+                <a href="@item.Link"
+                   class="btn btn-primary"
+                   target="_blank">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+}
+</div>

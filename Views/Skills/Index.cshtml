@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MyWebsite.Models.Skills>
+
+@{
+    ViewData["Title"] = "My Projects on which I worked in my carrer";
+}
+
+<h1>My Skills</h1>
+
+<p>
+    <a asp-action="Create"
+       class="btn btn-success mb-4">
+        + Add New Skill
+    </a>
+</p>
+
+
+
+<div class="row">
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6 mb-4">
+
+        <div class="card shadow h-100">
+
+            <div class="card-body">
+
+                <h3 class="card-title text-primary">
+                    @item.SkillName
+                </h3>
+
+                <p class="card-text">
+                        @item.Description
+                </p>
+
+                <p>
+                    <strong>Rating:</strong>
+                        <span class="badge bg-primary">
+                            @item.Rating
+                        </span>
+                   
+                </p>
+                    <p>
+                        <strong>Experience:</strong>
+                        <span class="badge bg-primary">
+                            @item.Experience
+                        </span>
+
+                    </p>
+               
+            </div>
+
+        </div>
+
+    </div>
+}
+</div>

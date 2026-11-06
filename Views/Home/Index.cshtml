@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4 ">Welcome to My Portfolio</h1>
+    <p>Hello, I'm Shilpi — a developer passionate about building modern web applications.
+        I am a .NET developer with experience in ASP.NET Core MVC, Web API, SQL Server, oracle and Entity Framework core.
+        Currently I am building my portfolio projects to strengthen my backend development skills.
+    </p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-3">
+        <a asp-controller="Project" asp-action="Index" class="btn btn-primary w-100">View Projects</a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="Skills" asp-action="Index" class="btn btn-secondary w-100">My Skills</a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="Experience" asp-action="Index" class="btn btn-info w-100">Experience</a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="Education" asp-action="Index" class="btn btn-dark w-100">Education</a>
+    </div>
+</div>
